@@ -1,0 +1,10 @@
+<svg id="facebook-messenger-3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="76.803" height="76.725" viewBox="0 0 76.803 76.725">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#00b2ff"/>
+      <stop offset="1" stop-color="#006aff"/>
+    </linearGradient>
+  </defs>
+  <path id="Path_5149" data-name="Path 5149" d="M88.4,50.2C66.767,50.2,50,66.032,50,87.414a36.389,36.389,0,0,0,12.061,27.525,3.089,3.089,0,0,1,1.035,2.184l.209,6.823a3.077,3.077,0,0,0,4.311,2.717l7.618-3.358a3.067,3.067,0,0,1,2.048-.154A41.807,41.807,0,0,0,88.4,124.626c21.635,0,38.4-15.831,38.4-37.213S110.036,50.2,88.4,50.2Z" transform="translate(-50 -50.201)" fill-rule="evenodd" fill="url(#linear-gradient)"/>
+  <path id="Path_5150" data-name="Path 5150" d="M128.661,206.98,139.942,189.1a5.769,5.769,0,0,1,8.329-1.536l8.971,6.723a2.308,2.308,0,0,0,2.774-.008l12.115-9.186a1.822,1.822,0,0,1,2.642,2.424L163.5,205.39a5.769,5.769,0,0,1-8.329,1.536L146.2,200.2a2.308,2.308,0,0,0-2.774.008L131.3,209.4A1.822,1.822,0,0,1,128.661,206.98Z" transform="translate(-113.316 -158.884)" fill="#fff" fill-rule="evenodd"/>
+</svg>
