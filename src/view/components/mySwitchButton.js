@@ -65,8 +65,12 @@ export default function MyAppBar() {
   const themeContext=useContext(ThemeContext);
 
   const classes = useStyle();
-  const [nubClick, setNubClick] = useState(true);
+  const [nubClick, setNubClick] = useState(null);
 
+  React.useEffect(()=>{
+    if(nubClick===null)
+    setNubClick(themeContext.isLightTheme)
+  },[nubClick])
   function handleNubClick() {
     setNubClick(!nubClick);
      themeContext.switchTheme();

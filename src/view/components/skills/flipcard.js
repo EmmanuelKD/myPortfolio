@@ -19,23 +19,7 @@ const useStyle = makeStyles((theme) => {
   );
 
   return {
-    // cardContainerRoot: {
-    //   gridColumn: "1/2",
-    //   gridRow: "1/2",
-    // },
-    // cardContainerMain: {
-    //   display: "flex",
-    //   flexWrap: "wrap",
-    // },
-    // root: {
-    //   width: "100%",
-    //   height: "100%",
-    // },
-    // main: {
-    //   display: "grid",
-    //   gridTemplateRow: "1",
-    //   gridTemplateColumn: "1",
-    // },
+
     flipRoot: {
       position: "fixed",
       width: "100%",
@@ -68,13 +52,11 @@ const useStyle = makeStyles((theme) => {
         gridTemplateColumns: "50% 50%",
         gridTemplateRows: "30% 10% 10% 10% 15% 15% 10%",
         padding: "19px",
-        width: "313px",
-        height: "493px",
-        margin: "auto",
-        marginTop: "69px ",
-        // gridTemplateColumns: "50% 50%",
+        width: "90vw",
+        // height: "493px",
+        // margin: "",
+        // marginTop: "px ",
 
-        // gridTemplateRows: "50% 10% 15% 15% 10%",
       },
     },
     hide: {
@@ -225,17 +207,16 @@ export default function FlipCardComponent(props) {
             strength={props.selectedObject.workingAgility.beginner}
           />
         </div>
-        <div className={classes.practiceProject}>
+        {/* <div className={classes.practiceProject}>
           <div>how actively used</div>
           <div>how actively used</div>
-        </div>
-        <div className={classes.whenLastUsed}>
+        </div> */}
+        {/* <div className={classes.whenLastUsed}>
           <div>how actively used</div>
           <div>how actively used</div>
-        </div>
+        </div> */}
         <div className={classes.ProjectButton}>
-          <Link to={"/project"} className={classes.link}>
-            {" "}
+          <Link to={"/projects"} className={classes.link}>
             <div className={classes.button}>projects</div>
           </Link>
         </div>

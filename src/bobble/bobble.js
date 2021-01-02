@@ -6,8 +6,11 @@ class Bobble {
   constructor({ sizeRatio, hasBorder, color }) {
     this.bobble = document.createElement("div");
     // console.log("created ");
+    let right = Math.round(Math.random() * window.screen.availWidth);
     const position = "fixed";
-    this.bobble.style.right = `${100 * sizeRatio}px`;
+    
+    this.bobble.style.mixBlendMode="screen"
+    this.bobble.style.right = `${right * sizeRatio}px`;
     this.bobble.style.position = position;
     this.bobble.style.width = `${sizeRatio * 10}px`;
     this.bobble.style.opacity = `${sizeRatio + 2 / 10}`; // this will be animated some how
@@ -37,11 +40,14 @@ class Bobble {
     var x = 0;
     animate({
       duration: 20,
-      draw: (val) => {
+      draw: (val,frame) => {
         x = val / sizeRatio;
         if (x > Screen.height - 100) {
+          cancelAnimationFrame(frame)
           this.bobble.remove();
+          
         } else {
+
           this.bobble.style.bottom = `${x}px`;
         }
       },
@@ -68,7 +74,7 @@ export default class BobbleCreator {
     clearInterval(this.interval);
   }
   createBobblesRandomly() {
-    colors = ["#00EEFF", "#00646B", "#FFFFFF", "#000000", "#707070"];
+    colors = ["#00EEFF", "#00646B", "#000000", "#707070"];
 
     let numberOfBobble = Math.round(Math.random() * 4);
 
@@ -94,8 +100,7 @@ function animate({ timing, draw, duration }) {
   let start = performance.now();
   const myDraw = draw;
   let progress;
-
-  requestAnimationFrame(function animate(time) {
+let frame=requestAnimationFrame(function animate(time) {
     // timeFraction goes from 0 to 1
     let timeFraction = (time - start) / duration;
     // if (timeFraction > 1) timeFraction = 1;
@@ -106,8 +111,11 @@ function animate({ timing, draw, duration }) {
     //*  here is where the all the animation will take place
     //* from the creation of the bobble to it animation and it delition
 
-    myDraw(progress); // draw it
+    myDraw(progress,frame); // draw it
 
     requestAnimationFrame(animate);
   });
 }
+
+
+// 'https://web.whatsapp.com/send?phone='+phone_no+'&text='+message

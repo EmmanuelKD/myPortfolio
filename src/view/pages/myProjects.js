@@ -19,10 +19,10 @@ let useStyle = makeStyles((theme) => {
   return {
     root: {},
     main: {
-      marginTop: "20px",
+      marginTop: "15px",
       height: "100vh",
       display: "grid",
-      gridTemplateColumns: "10% 60% 30%",
+      gridTemplateColumns: "15% 55% 30%",
       // gridTemplateRows: "50% 50%",
       [theme.breakpoints.down("sm")]: {
         gridTemplateColumns: "100%",
@@ -69,20 +69,20 @@ let useStyle = makeStyles((theme) => {
       },
     },
     scrollApp: {
-      height: "100%",
-
+      height: "100vh",
       // paddingTop: "29px",
       // paddingBottom: "29px",
       display: "flex",
       alignItems: "center",
       flexDirection: "column",
       justifyContent: "start",
-
-      //  overflowY: "hidden",
+      overflow: "hidden",
       //  overflowX: "hidden",
+      boxShadow: `10px 0px 6px 0px rgba(${cardColorWithOpacity.r},${cardColorWithOpacity.g},${cardColorWithOpacity.b},.26)`,
+
       [theme.breakpoints.down("sm")]: {
-        overflowY: "hidden",
-        overflowX: "scroll",
+        height: "100%",
+
         flexDirection: "row",
         boxShadow: `10px 0px 6px 0px rgba(${cardColorWithOpacity.r},${cardColorWithOpacity.g},${cardColorWithOpacity.b},.26)`,
         // WebkitScrollbar:{
@@ -97,9 +97,11 @@ let useStyle = makeStyles((theme) => {
       },
     },
     image: {
+      marginTop:"5px",
+
       cursor: "pointer",
-      height: "70px",
-      width: "70px",
+      height: "150px",
+      width: "150px",
       [theme.breakpoints.down("sm")]: {
         height: "70px",
         width: "70px",
@@ -406,7 +408,6 @@ function ProjectCard({ image, setSelectedData, projectData, classes }) {
         setSelectedData(projectData);
       }}
     >
-      {" "}
       <img
         alt={projectData.projectName}
         src={image}
@@ -423,3 +424,9 @@ function ProjectCard({ image, setSelectedData, projectData, classes }) {
 //   ,projectData:PropTypes.object,
 //   classes:PropTypes.object,
 // };
+
+
+
+// I am a software developer that has been passionate about coding since I first came in contact with it four years ago during my time at Blue Crest, I was learning networking at diploma level and since then I had been seeing my self sitting in front of a computer every day, spending more than six hours. nevertheless now i can proudly say I have over 4 years experience in programming. during this time I had learned various languages and frame works of which 90% was self taught.
+// I have always has this unquenchable thirst to learn new technologies and frameworks, and yet trying so hard to find a perfect balance between to mastering and to learning. I had written a lof of programs of which I cannot say any is there in the real world, but interestingly are good and with phew upgrades can be meaningful, at my early stage of programming i was only focusing on learning and getting the skills right, so most of the projects are uncompleted or not well structured.
+// As a programmer, I am also interested in entrepreneurship, I have been working on project that will set me up to own my own software company in the feature as that is my dream

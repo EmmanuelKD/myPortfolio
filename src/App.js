@@ -25,11 +25,11 @@ function App() {
   return (
     <ThemeContextConsumer>
       {(value) => {
-        let { isLightTheme, currentTheme, LightTheme } = value;
+        let { isLightTheme, DarkTheme, LightTheme } = value;
 
         return (
           <MuiThemeProvider
-            theme={createMuiTheme(isLightTheme ? currentTheme : LightTheme)}
+            theme={createMuiTheme(isLightTheme ? DarkTheme : LightTheme)}
           >
             <Body >
               {/* <Skills/> */}

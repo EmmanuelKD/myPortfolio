@@ -5,8 +5,8 @@ const DrawerContextConsumer=DrawerContext.Consumer;
 
 class DrawerContextProvider extends PureComponent{
 
-    constructor(){
-        super();
+    constructor(props){
+        super(props)
         this.state={
             isDrawerOpen:false,
             drawerSelectedIndex:null,

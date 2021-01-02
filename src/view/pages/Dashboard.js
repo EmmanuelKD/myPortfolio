@@ -3,6 +3,7 @@ import { makeStyles, useTheme } from "@material-ui/core/styles";
 import { profileImage } from "../../assets/assetGetter/asset";
 import { AboutMe } from "../../modules/AboutMe";
 import rgbConverter from "../../controllers/hexToRgb";
+
 const useStyle = makeStyles((theme) => {
   const cardColorWithOpacity = rgbConverter(
     theme.palette.type ==="light"
